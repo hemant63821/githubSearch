@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './LoanComponent.scss'
+import { connect } from 'react-redux'
 
 import Axios from 'axios'
 
@@ -227,4 +228,8 @@ class LoanComponent extends Component {
     }
 }
 
-export default LoanComponent;
+const mapStateToProps = state => ({
+    cities: state.bikeFilter != null ? state.bikeFilter.citiesList : [],
+})
+
+export default connect(mapStateToProps, {})(LoanComponent);

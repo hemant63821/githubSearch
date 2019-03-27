@@ -2,6 +2,7 @@ import { FETCH_RESULTS } from '../Constant'
 
 
 const intialState = {
+    count: '',
     allResults: []
 }
 
@@ -10,7 +11,8 @@ export default function (state = intialState, action) {
         case FETCH_RESULTS:
             return {
                 ...state,
-                allResults: []
+                count: action.payload.total_count,
+                allResults: action.payload.items
             }
 
         default:

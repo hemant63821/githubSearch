@@ -13,3 +13,19 @@ body{
 }
 
 
+.card {
+    border: 1px solid #E9E9E9;
+    box-shadow: 0px 2px 4px #00000012;
+    transition: box-shadow .3s;
+    padding: 10px 35px 10px 35px;
+    width: 100%;
+}
+
+.card-body{
+    background-color: #ffffff;
+    padding: 10px 35px 10px 35px;
+}
+
+h1{
+    font-size: 21px;
+}

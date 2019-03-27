@@ -3,7 +3,7 @@ import { FETCH_RESULTS } from '../Constant'
 
 
 export const fetchSearchResults = (searchKey) => dispatch => {
-    axios.get('(https://api.github.com/search/repositories?q=' + searchKey)
+    axios.get('https://api.github.com/search/repositories?q=' + searchKey)
         .then(data => {
             if (data.status == 200) {
                 dispatch({

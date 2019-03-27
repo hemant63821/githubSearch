@@ -1,28 +1,21 @@
 import React, { Component } from "react";
-import './GitSearchCard.scss'
-import { connect } from 'react-redux'
 
-class LoanComponent extends Component {
-
-    constructor(props) {
-        super(props)
-        this.state = {
-
-        }
-    }
-
-
-
-
-
-
+class GitSearchCard extends Component {
 
     render() {
+        const { projectTitle, description } = this.props
         return (
             <div className="row">
-                <div className="card">
-                    <div className="card-body">
-                        <h1>Projects</h1>
+                <div className="col-sm-4 col-lg-4">
+                    <div className="card">
+                        <div className="card-body text-center ripple">
+                            <h5 className="card-title">
+                                {projectTitle}
+                            </h5>
+                            <p className="card-text">
+                                {description}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,8 +23,4 @@ class LoanComponent extends Component {
     }
 }
 
-const mapStateToProps = state => ({
-    cities: state.bikeFilter != null ? state.bikeFilter.citiesList : [],
-})
-
-export default connect(mapStateToProps, {})(LoanComponent);
+export default GitSearchCard;
